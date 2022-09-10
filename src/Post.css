@@ -25,6 +25,9 @@
     font-size: 14px !important;
     color: var(--twitter-color);
 }
+.post__headerDescription{
+    margin-bottom: 5px;
+}
 .post__headerSpecial{
     font-weight: 600;
     font-size: 12px;

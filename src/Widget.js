@@ -23,6 +23,8 @@ const Widget = () => {
           screenName='cleverqazi'
           options={{height:400}}
         />
+
+        {/* What this twitter do is it redirects you to original twitter page and open tweet box with the contents present in options */}
         <TwitterShareButton
         // redirected to clever programmer youtube channel
           url={'https://www.youtube.com/watch?v=rJjaqSTzOxI&t=4090s'}

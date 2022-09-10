@@ -1,5 +1,4 @@
 import React from 'react'
-import avatarImg from './avatar.png' //Importing the image to be able to use it in this component
 import { Avatar } from '@material-ui/core'
 import './Post.css'
 import { VerifiedUser,ChatBubbleOutline,Repeat,FavoriteBorder,Publish } from '@material-ui/icons'
@@ -14,23 +13,23 @@ const Post = ({
   return (
     <div className='post'>
         <div className='post__avatar'>
-            <Avatar src={avatarImg}/>
+            <Avatar src={avatar}/>
         </div>
         <div className='post__body'>
             <div className='post__header'>
                 <div className='post__headerText'>
                     <h3>
-                        Manu kashyap
+                        {displayName}{" "}
                         <span className='post__headerSpecial'>
-                            <VerifiedUser className='post__badge'/> @mankas
+                            {verified && <VerifiedUser className='post__badge'/>} @{username}
                         </span>
                     </h3>
                 </div>
                 <div className='post__headerDescription'>
-                    <p>Hey! Come and learn react with me.</p>
+                    <p>{text}</p>
                 </div>
             </div>
-            <img src='https://media2.giphy.com/media/gGx3NyO61GnvZK4HhE/giphy.gif?cid=ecf05e47yofuym851ueph5wp3ogx2xqomfcikbt3ty45cvil&rid=giphy.gif&ct=g'/>
+            <img src={image}/>
             <div className='post__footer'>
                 <ChatBubbleOutline fontSize='small'/>
                 <Repeat fontSize='small'/>
